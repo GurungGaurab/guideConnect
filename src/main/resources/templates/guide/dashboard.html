@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Guide Dashboard - GuideConnect</title>
+</head>
+<body>
+<h1>Welcome to GuideConnect!</h1>
+<h2>Guide Dashboard</h2>
+
+<nav>
+  <a th:href="@{/guide/tours}">My Tours</a> |
+  <a th:href="@{/guide/bookings}">Booking Requests</a> |
+  <a th:href="@{/guide/profile}">My Profile</a> |
+  <form th:action="@{/logout}" method="post" style="display:inline">
+    <button type="submit">Logout</button>
+  </form>
+</nav>
+
+</body>
+</html>

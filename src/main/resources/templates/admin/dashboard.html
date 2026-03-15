@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Admin Dashboard - GuideConnect</title>
+</head>
+<body>
+<h1>GuideConnect Admin</h1>
+<h2>Admin Dashboard</h2>
+
+<nav>
+  <a th:href="@{/admin/users}">Manage Users</a> |
+  <a th:href="@{/admin/disputes}">Disputes</a> |
+  <a th:href="@{/admin/reports}">Reports</a> |
+  <form th:action="@{/logout}" method="post" style="display:inline">
+    <button type="submit">Logout</button>
+  </form>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Profile - GuideConnect</title>
+</head>
+<body>
+<h1>Edit Profile</h1>
+
+<form th:action="@{/guide/profile/edit}" method="post">
+    <div>
+        <label>Biography</label>
+        <textarea name="biography" th:text="${guide.biography}"></textarea>
+    </div>
+    <div>
+        <label>Languages</label>
+        <input type="text" name="languages" th:value="${guide.languages}"/>
+    </div>
+    <div>
+        <label>Pricing (per person)</label>
+        <input type="number" name="pricing" step="0.01" th:value="${guide.pricing}"/>
+    </div>
+    <button type="submit">Save Changes</button>
+</form>
+
+<a th:href="@{/guide/profile}">Cancel</a>
+</body>
+</html>

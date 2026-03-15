@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Profile - GuideConnect</title>
+</head>
+<body>
+<h1>My Profile</h1>
+
+<div>
+    <p><strong>First Name:</strong> <span th:text="${user.firstName}"></span></p>
+    <p><strong>Last Name:</strong> <span th:text="${user.lastName}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
+    <p><strong>Biography:</strong> <span th:text="${user.biography}"></span></p>
+    <p><strong>Languages:</strong> <span th:text="${user.languages}"></span></p>
+    <p><strong>Pricing:</strong> $<span th:text="${user.pricing}"></span></p>
+</div>
+
+<a th:href="@{/guide/profile/edit}">Edit Profile</a>
+<a th:href="@{/guide/dashboard}">Back to Dashboard</a>
+</body>
+</html>
