@@ -27,7 +27,6 @@ public class GuideController {
         model.addAttribute("user", user);
         return "guide/profile";
 
-
     }
 
     @GetMapping("/profile/edit")

@@ -9,10 +9,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class UserService { //constraints for registering and logging in
 
-    @Autowired
-    private UserRepository userRepository;
+    @Autowired //autowired puts the construcotr manually as shown below)
+    private UserRepository userRepository; //handles public UserService(UserRepository userRepository){
+                                                //  this.userRepository = userRepository);
 
     @Autowired
     private TouristRepository touristRepository;
